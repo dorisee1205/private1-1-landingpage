@@ -40,8 +40,9 @@
   @media(max-width:760px){nav .nbtn{display:none;}nav{padding:18px 26px;}}
 
   /* HERO */
-  .hero-band{height:210px;background:linear-gradient(120deg,#b9a99a,#8a7d72 40%,#cdbfb2);position:relative;margin-top:66px;}
-  .hero-band:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.12),rgba(254,247,242,.0) 70%);}
+  .hero-band{height:230px;position:relative;margin-top:66px;overflow:hidden;background:linear-gradient(180deg,#F7ECE0,#EBD8C6);}
+  .hero-band svg{position:absolute;inset:0;width:100%;height:100%;display:block;}
+  .hero-band:after{content:"";position:absolute;left:0;right:0;bottom:0;height:70px;background:linear-gradient(180deg,rgba(254,247,242,0),var(--cream));}
   .hero{text-align:center;padding:64px 0 90px;}
   .hero .eyebrow{margin-bottom:30px;}
   .hero h1{font-family:'Cormorant Garamond',serif;font-weight:400;line-height:1.0;font-size:clamp(42px,7vw,88px);letter-spacing:.005em;}
@@ -160,7 +161,26 @@
 </nav>
 
 <!-- HERO -->
-<div class="hero-band"></div>
+<div class="hero-band">
+  <svg viewBox="0 0 1440 230" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <defs>
+      <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" stop-color="#F8EEE3"/>
+        <stop offset="1" stop-color="#ECD9C7"/>
+      </linearGradient>
+      <radialGradient id="sun" cx="50%" cy="50%" r="50%">
+        <stop offset="0" stop-color="#F3BB80" stop-opacity=".9"/>
+        <stop offset="55%" stop-color="#E9A765" stop-opacity=".28"/>
+        <stop offset="100%" stop-color="#E9A765" stop-opacity="0"/>
+      </radialGradient>
+    </defs>
+    <rect width="1440" height="230" fill="url(#sky)"/>
+    <circle cx="1095" cy="74" r="130" fill="url(#sun)"/>
+    <path d="M0,126 C240,96 470,132 720,116 C960,101 1210,104 1440,120 L1440,230 L0,230 Z" fill="#CFBBAA" opacity=".55"/>
+    <path d="M0,158 C300,130 520,172 780,154 C1040,138 1250,166 1440,154 L1440,230 L0,230 Z" fill="#AEB98F" opacity=".62"/>
+    <path d="M0,190 C260,168 500,202 760,186 C1060,168 1260,196 1440,184 L1440,230 L0,230 Z" fill="#88A16A" opacity=".78"/>
+  </svg>
+</div>
 <div class="hero">
   <div class="wrap">
     <div class="eyebrow label">Somatic &amp; Breathwork . 1-to-1 Transformation . Conscious Leadership</div>
