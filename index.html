@@ -99,11 +99,16 @@
 
   /* KIND WORDS */
   .kw{background:var(--cream2);}
-  .kwgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:46px;margin-top:20px;}
-  .kwgrid .q p{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:21px;line-height:1.45;color:var(--ink);border-top:1px solid rgba(43,36,34,.2);padding-top:26px;}
+  .kwgrid{display:flex;gap:36px;margin-top:24px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:22px;-webkit-overflow-scrolling:touch;}
+  .kwgrid .q{flex:0 0 clamp(280px,84vw,360px);scroll-snap-align:start;}
+  .kwgrid .q p{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:20px;line-height:1.5;color:var(--ink);border-top:1px solid rgba(43,36,34,.2);padding-top:26px;}
   .kwgrid .who{margin-top:20px;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--taupe);}
+  .kwgrid::-webkit-scrollbar{height:6px;}
+  .kwgrid::-webkit-scrollbar-track{background:rgba(43,36,34,.08);border-radius:3px;}
+  .kwgrid::-webkit-scrollbar-thumb{background:rgba(43,36,34,.22);border-radius:3px;}
+  .kwscroll-hint{margin-top:10px;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--taupe);}
   .note{font-size:12px;color:var(--desert);letter-spacing:.04em;margin-top:40px;text-align:center;}
-  @media(max-width:820px){.kwgrid{grid-template-columns:1fr;gap:34px;}}
+  @media(max-width:820px){.kwgrid{gap:24px;}}
 
   /* ABOUT */
   .about{display:grid;grid-template-columns:.9fr 1.1fr;gap:64px;align-items:center;}
@@ -272,7 +277,7 @@
       <div class="reason"><div class="rn">2</div><div><h4>I build this around you, never off the shelf</h4><p>Every part of the work is designed for the reality of a demanding leader, and for you specifically, so nothing about it feels generic or borrowed from someone else's life.</p></div></div>
       <div class="reason"><div class="rn">3</div><div><h4>I reach what the therapy, the books and the willpower could not</h4><p>You have tried the usual fixes and they only went so far. I work at the level underneath them, with your body and your nervous system, where change finally holds instead of fading.</p></div></div>
       <div class="reason"><div class="rn">4</div><div><h4>I stay in your corner, not just in the room</h4><p>You are not handed a method and left to manage it alone. I am there between sessions, in the moments that usually catch you off guard, so support arrives when it actually matters.</p></div></div>
-      <div class="reason"><div class="rn">5</div><div><h4>You get your life back — and room to grow it</h4><p>This is about far more than feeling less stressed. When you lead from a steadier place, everything downstream shifts: deeper relationships, better health, and the clarity and energy to make space for greater opportunity and wealth.</p></div></div>
+      <div class="reason" style="grid-column:1 / -1;"><div class="rn">5</div><div><h4>You get your life back — and room to grow it</h4><p>This is about far more than feeling less stressed. When you lead from a steadier place, everything downstream shifts: deeper relationships, better health, and the clarity and energy to make space for greater opportunity and wealth.</p></div></div>
     </div>
   </div>
 </section>
@@ -283,10 +288,13 @@
     <div class="eyebrow-row"><span class="label">Kind words</span><span class="line"></span></div>
     <h2 class="head" style="margin-bottom:50px;"><span class="wine-word">Kind words</span><span class="it">from people I've walked beside.</span></h2>
     <div class="kwgrid">
-      <div class="q"><p>"Working with Doris has truly been one of the best investments I've made. She saw my potential before I could. She pushed me to try, and she was right."</p><div class="who">Vanoosheh</div></div>
-      <div class="q"><p>"Doris has ignited a newfound passion within me. Everything I do has become more dynamic, more engaging, and more alive."</p><div class="who">Audrey</div></div>
-      <div class="q"><p>"The work with Doris was the most important one in realising and finding my own way. I gained knowledge, an amazing mentor, and a really great friend."</p><div class="who">Nana</div></div>
+      <div class="q"><p>"Doris guided me through a deeply grounding journey that released unresolved emotions and brought so much clarity and peace. I felt my body fully let go and my mind go completely still — an experience beyond words."</p><div class="who">Private 1-to-1 client</div></div>
+      <div class="q"><p>"There are professionals who give exactly what they're paid to do, and those who genuinely care that you do well. Doris is the latter. If you ever feel stagnant or at a plateau in your career or in life, she will take you to the next level."</p><div class="who">Founder, Hong Kong</div></div>
+      <div class="q"><p>"By the end I felt more centered, more satisfied, and genuinely reconnected to myself. Doris guides you with such thoughtful care and expertise — I'd recommend her to anyone looking for more balance and fulfilment."</p><div class="who">Mami</div></div>
+      <div class="q"><p>"Doris supported and led us when we needed guidance, but was also a great listener and mirror — helping us reflect and find real clarity. I'd recommend working with her on a personal or a team level."</p><div class="who">Founder, Hong Kong</div></div>
+      <div class="q"><p>"She encouraged me to let go of perfection and see myself through a kinder lens, uncovering strengths I had lost sight of. A reminder that we are not alone in what we carry."</p><div class="who">Coaching client</div></div>
     </div>
+    <p class="kwscroll-hint">Scroll for more &rarr;</p>
   </div>
 </section>
 
