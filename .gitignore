@@ -1,0 +1,6 @@
+# Large original photo files (web-optimized copies are committed instead)
+BEE*.JPEG
+0A6A*.jpg
+IMG_*.JPG
+*.heic
+*.HEIC
