@@ -45,8 +45,8 @@
   .hero-band:after{content:"";position:absolute;left:0;right:0;bottom:0;height:70px;background:linear-gradient(180deg,rgba(254,247,242,0),var(--cream));}
 
   /* PHOTOS */
-  .photo-band{height:clamp(340px,48vw,540px);background-size:cover;background-repeat:no-repeat;}
-  .photo-handson{background-image:url('photo-handson.jpg');background-position:center 42%;}
+  .photo-feature{display:flex;justify-content:center;background:var(--cream2);padding:48px 24px;}
+  .photo-feature img{max-width:100%;max-height:72vh;width:auto;height:auto;display:block;border-radius:16px;}
   .lead-photo img{width:100%;height:auto;border-radius:14px;display:block;margin-bottom:30px;}
   .hero{text-align:center;padding:64px 0 90px;}
   .hero .eyebrow{margin-bottom:30px;}
@@ -351,7 +351,7 @@
   </div>
 </section>
 
-<div class="photo-band photo-handson" aria-hidden="true"></div>
+<div class="photo-feature"><img src="photo-handson.jpg" alt="Doris guiding a private hands-on session"></div>
 
 <!-- OFFER -->
 <section class="offer" id="offer">
