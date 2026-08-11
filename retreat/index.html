@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Glow Up From the Inside Out · A retreat about becoming · Bali · Nov 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+<style>
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  :root{
+    --ink:#17110c; --ink2:#1e1610; --paper:#fbf6ef; --soft:#ded1bd;
+    --cream:#f1e7d6; --cream-ink:#2b2119; --cream-soft:#7a6a55;
+    --champ:#CDBA92; --champ-light:#DcCaA6; --champ-deep:#a9895a;
+    --ld:rgba(251,246,239,.16); --ll:rgba(43,33,25,.14);
+  }
+  body{font-family:'Lato',sans-serif;font-weight:300;background:var(--ink);color:var(--paper);line-height:1.75;-webkit-font-smoothing:antialiased;}
+  .sec{padding:13vh 7vw;}
+  .wrap{max-width:1060px;margin:0 auto;}
+  .narrow{max-width:700px;margin:0 auto;}
+  .eyebrow{font-family:'Lato';font-weight:700;letter-spacing:.34em;text-transform:uppercase;font-size:12px;color:var(--champ-deep);}
+  .idisplay{font-family:'Cormorant';font-weight:300;font-style:italic;line-height:.98;letter-spacing:.005em;}
+  .btn{display:inline-block;font-family:'Lato';font-weight:700;letter-spacing:.2em;text-transform:uppercase;font-size:11px;padding:18px 36px;text-decoration:none;transition:.25s;}
+  .btn.solid{background:var(--champ);color:#17110c;}
+  .btn.solid:hover{background:#e2d4b5;}
+  .btn.ghost{border:1px solid var(--ld);color:var(--paper);}
+  .btn.ghost:hover{background:rgba(251,246,239,.1);}
+
+  /* HERO */
+  .hero{position:relative;min-height:100vh;display:flex;align-items:flex-end;overflow:hidden;}
+  .hero .bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 40%;}
+  .hero .ov{position:absolute;inset:0;background:linear-gradient(180deg,rgba(23,17,12,.5) 0%,rgba(23,17,12,.32) 30%,rgba(23,17,12,.78) 75%,rgba(23,17,12,.96) 100%);}
+  .hero .c{position:relative;z-index:2;padding:0 7vw 9vh;max-width:1000px;}
+  .hero .k{font-family:'Lato';font-weight:400;letter-spacing:.34em;text-transform:uppercase;font-size:13px;color:var(--champ-light);margin-bottom:24px;}
+  .hero h1{font-family:'Cormorant';font-weight:300;font-style:italic;font-size:clamp(56px,10vw,128px);line-height:.9;color:var(--paper);}
+  .hero .meta{font-family:'Lato';font-weight:300;letter-spacing:.24em;text-transform:uppercase;font-size:15px;color:var(--soft);margin-top:26px;}
+  .hero .sub{font-family:'Lato';font-weight:300;font-size:19px;line-height:1.6;color:var(--soft);margin-top:20px;max-width:540px;}
+  .hero .cta{display:flex;gap:16px;margin-top:36px;flex-wrap:wrap;}
+
+  /* INVITE (dark) */
+  .invite{background:var(--ink);text-align:center;}
+  .invite .eyebrow{display:block;margin-bottom:32px;}
+  .invite .big{font-family:'Cormorant';font-weight:300;font-style:italic;font-size:clamp(28px,4.4vw,52px);line-height:1.15;color:var(--paper);max-width:900px;margin:0 auto;}
+  .invite p{font-size:18px;color:var(--soft);max-width:660px;margin:30px auto 0;}
+  .invite .receipt{font-family:'Cormorant';font-style:italic;font-weight:400;font-size:clamp(22px,3vw,32px);color:var(--champ-light);margin-top:44px;}
+
+  /* PHOTO BAND */
+  .band{position:relative;height:64vh;overflow:hidden;}
+  .band img{width:100%;height:100%;object-fit:cover;}
+  .band .tint{position:absolute;inset:0;background:linear-gradient(180deg,rgba(23,17,12,.25),rgba(23,17,12,.45));}
+
+  /* STORY (light) */
+  .story{background:var(--cream);color:var(--cream-ink);}
+  .story-grid{max-width:1060px;margin:0 auto;display:grid;grid-template-columns:minmax(280px,360px) 1fr;gap:60px;align-items:start;}
+  .story-photo{position:sticky;top:70px;}
+  .story-photo img{width:100%;height:auto;display:block;filter:saturate(1.02);}
+  .story-photo .cap{font-family:'Cormorant';font-style:italic;font-size:19px;color:var(--cream-soft);text-align:center;margin-top:16px;}
+  .story .eyebrow{color:var(--champ-deep);display:block;margin-bottom:22px;}
+  .story-text .lead{font-family:'Cormorant';font-style:italic;font-weight:400;font-size:clamp(24px,3vw,32px);line-height:1.2;color:var(--cream-ink);margin-bottom:26px;}
+  .story-text p{font-size:17px;color:#4b3d30;margin-bottom:20px;}
+  .story-link{display:inline-block;margin-top:10px;font-family:'Lato';font-weight:700;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--champ-deep);text-decoration:none;border-bottom:1px solid var(--champ-deep);padding-bottom:5px;}
+
+  /* METHOD (dark) */
+  .method{background:var(--ink2);}
+  .method .head{text-align:center;margin-bottom:60px;}
+  .method .eyebrow{display:block;margin-bottom:20px;}
+  .method .head h2{font-family:'Cormorant';font-weight:300;font-style:italic;font-size:clamp(34px,5vw,58px);color:var(--paper);}
+  .method-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:44px;}
+  .method .step .n{font-family:'Cormorant';font-style:italic;font-size:30px;color:var(--champ-light);}
+  .method .step h3{font-family:'Cormorant';font-weight:500;font-size:27px;color:var(--paper);margin:6px 0 14px;border-top:1px solid var(--ld);padding-top:20px;}
+  .method .step p{font-size:15.5px;color:var(--soft);}
+  .method .glow{text-align:center;font-family:'Cormorant';font-style:italic;font-size:20px;color:var(--soft);max-width:720px;margin:56px auto 0;}
+
+  /* DAYS (dark) */
+  .days{background:var(--ink);}
+  .days .eyebrow{display:block;text-align:center;margin-bottom:52px;}
+  .day{display:grid;grid-template-columns:70px 1fr;gap:26px;padding:26px 0;border-top:1px solid var(--ld);align-items:baseline;max-width:820px;margin:0 auto;}
+  .day .n{font-family:'Cormorant';font-style:italic;font-size:40px;color:var(--champ-light);line-height:.8;}
+  .day h4{font-family:'Cormorant';font-weight:500;font-size:25px;color:var(--paper);margin-bottom:4px;}
+  .day p{font-size:16px;color:var(--soft);}
+
+  /* LEAVE (dark, deep) */
+  .leave{background:var(--ink2);}
+  .leave .eyebrow{display:block;text-align:center;margin-bottom:46px;}
+  .leave ul{list-style:none;max-width:760px;margin:0 auto;columns:1;}
+  .leave li{position:relative;padding:16px 0 16px 30px;border-bottom:1px solid var(--ld);font-family:'Cormorant';font-size:22px;color:var(--paper);}
+  .leave li:before{content:"✦";position:absolute;left:0;top:20px;color:var(--champ-light);font-size:13px;}
+
+  /* KIND WORDS (light) */
+  .kw{background:var(--cream);color:var(--cream-ink);text-align:center;}
+  .kw .eyebrow{color:var(--champ-deep);display:block;margin-bottom:54px;}
+  .kw-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:44px;max-width:1060px;margin:0 auto;}
+  .kw .q p{font-family:'Cormorant';font-style:italic;font-size:21px;line-height:1.45;color:var(--cream-ink);}
+  .kw .q .who{font-family:'Lato';font-weight:700;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--champ-deep);margin-top:22px;}
+
+  /* INCLUDED (dark) */
+  .incl{background:var(--ink);}
+  .incl .eyebrow{display:block;text-align:center;margin-bottom:46px;}
+  .incl ul{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:0 54px;max-width:900px;margin:0 auto;}
+  .incl li{position:relative;padding:16px 0 16px 30px;border-bottom:1px solid var(--ld);font-size:16px;color:var(--paper);}
+  .incl li:before{content:"✦";position:absolute;left:0;top:18px;color:var(--champ-light);font-size:12px;}
+  .incl .note{max-width:900px;margin:26px auto 0;font-size:14.5px;color:var(--soft);text-align:center;}
+
+  /* DETAILS (light) */
+  .details{background:var(--cream);color:var(--cream-ink);text-align:center;}
+  .details .eyebrow{color:var(--champ-deep);display:block;margin-bottom:34px;}
+  .details .box{max-width:620px;margin:0 auto;border:1px solid var(--champ);padding:46px;background:#f7f0e3;}
+  .details .box p{font-size:17px;color:var(--cream-ink);padding:7px 0;}
+  .details .price{font-family:'Cormorant';font-style:italic;font-size:27px;color:var(--champ-deep);margin:18px 0 6px;}
+  .details .price b{font-weight:500;color:var(--cream-ink);font-style:normal;}
+  .details .tiny{font-size:13px;color:var(--cream-soft);}
+  .details .btn.solid{margin-top:26px;background:var(--champ-deep);color:#fff;}
+  .details .btn.solid:hover{background:#8f7248;}
+
+  /* FAQ (dark) */
+  .faq{background:var(--ink2);}
+  .faq .eyebrow{display:block;text-align:center;margin-bottom:44px;}
+  .faq .item{border-top:1px solid var(--ld);padding:24px 0;max-width:800px;margin:0 auto;}
+  .faq .item:last-child{border-bottom:1px solid var(--ld);}
+  .faq h4{font-family:'Cormorant';font-weight:500;font-size:22px;color:var(--champ-light);margin-bottom:8px;}
+  .faq p{font-size:16px;color:var(--soft);}
+
+  /* CLOSE */
+  .close{position:relative;min-height:88vh;display:flex;align-items:center;justify-content:center;text-align:center;overflow:hidden;}
+  .close .bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;}
+  .close .ov{position:absolute;inset:0;background:linear-gradient(180deg,rgba(23,17,12,.72),rgba(23,17,12,.86));}
+  .close .c{position:relative;z-index:2;padding:0 7vw;max-width:760px;}
+  .close h2{font-family:'Cormorant';font-weight:300;font-style:italic;font-size:clamp(32px,5vw,58px);color:var(--paper);line-height:1.05;}
+  .close p{font-size:18px;color:var(--soft);margin:26px auto;max-width:560px;}
+  .close .final{font-family:'Cormorant';font-style:italic;font-size:24px;color:var(--champ-light);margin:22px auto 34px;}
+  .close .tiny{font-size:13px;color:var(--soft);margin-top:18px;letter-spacing:.04em;}
+
+  footer{background:#0f0b07;color:var(--soft);text-align:center;padding:60px 20px;}
+  footer .logo img{height:46px;width:auto;opacity:.9;}
+  footer p{font-size:12.5px;letter-spacing:.16em;text-transform:uppercase;margin-top:16px;color:rgba(222,209,189,.6);}
+
+  @media(max-width:860px){
+    .method-grid{grid-template-columns:1fr;gap:34px;}
+    .kw-grid,.incl ul{grid-template-columns:1fr;}
+    .story-grid{grid-template-columns:1fr;gap:34px;}
+    .story-photo{position:static;max-width:320px;margin:0 auto;}
+    .sec{padding:11vh 8vw;}
+  }
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<section class="hero">
+  <img class="bg" src="/Photos/retreat-field-banner.jpg" alt="">
+  <div class="ov"></div>
+  <div class="c">
+    <div class="k">A retreat about becoming · Bali</div>
+    <h1>glow up<br>from the inside out</h1>
+    <div class="meta">November 22&ndash;26, 2026 · Twelve women</div>
+    <div class="sub">Five days in Bali to put it all down, and finally meet the woman you're becoming.</div>
+    <div class="cta">
+      <a class="btn solid" href="#details">Reserve your space</a>
+      <a class="btn ghost" href="mailto:doris12@gmail.com?subject=Glow%20Up%20Retreat">Message me to apply</a>
+    </div>
+  </div>
+</section>
+
+<!-- INVITE -->
+<section class="sec invite">
+  <span class="eyebrow">The invitation</span>
+  <div class="big">Five days in Bali. Just twelve of us. To put it all down, and finally come home to yourself.</div>
+  <p>This is a retreat about becoming. Not becoming someone new… becoming who you actually ARE, underneath everything you learned to be to keep everyone else comfortable. The good girl. The good daughter. Not too loud, not too much.</p>
+  <p>And no, this isn't a spa week. We go underneath, to the body, the nervous system, the subconscious quietly running 95% of your life. Because real radiance isn't a treatment. It's what happens when a woman finally exhales.</p>
+  <div class="receipt">Radiance is the receipt.</div>
+</section>
+
+<!-- BAND -->
+<div class="band"><img src="/Photos/retreat-practice.jpg" alt=""><div class="tint"></div></div>
+
+<!-- STORY -->
+<section class="sec story">
+  <div class="story-grid">
+    <div class="story-photo">
+      <img src="/Photos/becoming-portrait.jpg" alt="Doris">
+      <div class="cap">Doris</div>
+    </div>
+    <div class="story-text">
+      <span class="eyebrow">My story</span>
+      <p class="lead">Okay. Deep breath. Here's the truth.</p>
+      <p>For 18 years I looked like I had it ALL figured out. The finance career, the MBA, the life that photographs well. And inside? I was exhausted, anxious, and so far from myself I didn't recognize her anymore.</p>
+      <p>Back in 2004, my body tried to warn me. It gave out completely… a drug-induced seizure at my lowest, most depressed point, and I spent five days in the hospital. That should have been my wake-up call.</p>
+      <p>But you know what I did? I went right back to finance. For 15 MORE years. I got the sign, and I ignored it, because I didn't yet have the courage to change. Staying was familiar. Leaving was terrifying.</p>
+      <p>It took until 2019 for life to shake me awake for good. Grief came in waves that year… I lost three people who mattered so much to me. Two of them far, far too young. That was the year I finally walked away from finance entirely, and started the long walk back to myself.</p>
+      <p>I don't share this for sympathy. I share it because I know some of you are exactly where I was. Looking fine. Feeling empty. And I don't want it to take a hospital bed, or a loss, for you to remember there's SO much more.</p>
+      <a class="story-link" href="https://www.dorisay.com/my-story-1" target="_blank" rel="noopener">Read my full story</a>
+    </div>
+  </div>
+</section>
+
+<!-- METHOD -->
+<section class="sec method">
+  <div class="head">
+    <span class="eyebrow">How the week moves</span>
+    <h2>Reveal. Release. Rewire.</h2>
+  </div>
+  <div class="method-grid">
+    <div class="step"><div class="n">i</div><h3>Reveal</h3><p>We gently uncover what's actually running you. The old stories, the beliefs, the patterns you didn't even know you were carrying. You can't change what you can't see.</p></div>
+    <div class="step"><div class="n">ii</div><h3>Release</h3><p>We let it GO. Breathwork, somatics, energy work. Not talking about it… feeling it leave your body. This is usually the day the tears come. Bring them. They're welcome here.</p></div>
+    <div class="step"><div class="n">iii</div><h3>Rewire</h3><p>Then we go into the subconscious and rewrite it. NLP, hypnosis, manifestation, identity work. So the new you actually holds when you get home, not just in the Bali bubble.</p></div>
+  </div>
+  <div class="glow">And woven all the way through, the glow: facials, gua sha, body rituals with our beautiful Bali spa partners. Your outside slowly catching up to your inside.</div>
+</section>
+
+<!-- BAND -->
+<div class="band"><img src="/Photos/sisterhood-joy.jpg" alt=""><div class="tint"></div></div>
+
+<!-- DAYS -->
+<section class="sec days">
+  <span class="eyebrow">A taste of the days</span>
+  <div class="day"><div class="n">1</div><div><h4>Arrive &amp; Reveal</h4><p>Welcome circle, water blessing, first breath. Where are you now?</p></div></div>
+  <div class="day"><div class="n">2</div><div><h4>Release</h4><p>The big breathwork. Put the weight down.</p></div></div>
+  <div class="day"><div class="n">3</div><div><h4>Rewire</h4><p>Rewrite the story, and a facial &amp; gua sha, because glow.</p></div></div>
+  <div class="day"><div class="n">4</div><div><h4>Reclaim your voice</h4><p>The courage to be seen, the safety to speak, the fire coming back online.</p></div></div>
+  <div class="day"><div class="n">5</div><div><h4>Integrate &amp; Glow</h4><p>Radiance reveal, closing circle, and intentions for the woman you're becoming.</p></div></div>
+</section>
+
+<!-- LEAVE -->
+<section class="sec leave">
+  <span class="eyebrow">You'll leave with</span>
+  <ul>
+    <li>The courage to be seen, and to stop hiding</li>
+    <li>Your voice back, and the safety to actually use it</li>
+    <li>An identity that finally fits… the woman you're becoming into</li>
+    <li>Confidence &amp; self-trust, the real kind, from the inside out</li>
+    <li>A nervous system that finally knows how to rest</li>
+    <li>Skin &amp; a presence that GLOW, the kind that lasts</li>
+    <li>A little sisterhood of women who actually SAW you</li>
+    <li>The most important relationship of your life, the one with yourself, rebuilt</li>
+  </ul>
+</section>
+
+<!-- KIND WORDS -->
+<section class="sec kw">
+  <span class="eyebrow">Kind words</span>
+  <div class="kw-grid">
+    <div class="q"><p>"Doris guided me through a deeply grounding journey that helped me release emotions I'd been holding for years. I left with so much clarity and peace."</p><div class="who">Breathwork client</div></div>
+    <div class="q"><p>"I left inspired, reignited, and carrying a spark of excitement for what's next. I didn't expect to feel this alive."</p><div class="who">Retreat guest</div></div>
+    <div class="q"><p>"She doesn't hand you the answers… she reminds you the treasure was always yours. That's her magic."</p><div class="who">Dorothy</div></div>
+  </div>
+</section>
+
+<!-- INCLUDED -->
+<section class="sec incl">
+  <span class="eyebrow">What's included</span>
+  <ul>
+    <li>4 nights in a beautiful Ubud villa</li>
+    <li>All meals, nourishing &amp; glow-worthy</li>
+    <li>Every breathwork, somatic &amp; subconscious session</li>
+    <li>Daily movement, yoga &amp; meditation</li>
+    <li>Facials, gua sha &amp; body rituals with our Bali spa partners</li>
+    <li>Welcome water blessing &amp; closing ceremony</li>
+    <li>Your take-home practices &amp; radiance reveal</li>
+    <li>A little sisterhood of women walking it with you</li>
+  </ul>
+  <p class="note">Optional add-ons: cryotherapy, infrared sauna, acupuncture. Flights &amp; airport transfers aren't included (I'll send all the logistics once you've reserved your space).</p>
+</section>
+
+<!-- DETAILS -->
+<section class="sec details" id="details">
+  <span class="eyebrow">The details</span>
+  <div class="box">
+    <p>Ubud, Bali</p>
+    <p>November 22 to 26, 2026 · 5 days, 4 nights</p>
+    <p>An intimate circle of twelve women</p>
+    <div class="price"><b>$3,800</b> shared room &nbsp;·&nbsp; <b>$4,800</b> single</div>
+    <p class="tiny">A 50% deposit reserves your space.</p>
+    <a class="btn solid" href="mailto:doris12@gmail.com?subject=Glow%20Up%20Retreat" >Reserve your space</a>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="sec faq">
+  <span class="eyebrow">The questions you're probably asking</span>
+  <div class="item"><h4>Do I need any experience with breathwork or somatics?</h4><p>None at all. Everything is guided, gently, step by step. Honestly? The women who've never done this before often go the deepest.</p></div>
+  <div class="item"><h4>Is this therapy?</h4><p>No. This is experiential work with the body, the breath &amp; the subconscious. It's not diagnosis or treatment, but it can sit beautifully alongside the therapy you might already be doing.</p></div>
+  <div class="item"><h4>What if I have a health condition?</h4><p>Please just tell me when you register. Some breathwork isn't suitable for certain heart, seizure or psychiatric conditions, and pregnancy. I'll always adapt things so you feel safe &amp; held.</p></div>
+  <div class="item"><h4>How do I get to Ubud?</h4><p>Fly into Bali (airport code DPS), then it's about a 1 to 1.5 hour drive up to Ubud. Once you've reserved, I'll send you everything… where to fly, where to stay, how to get to us.</p></div>
+  <div class="item"><h4>What's the deposit &amp; cancellation policy?</h4><p>A 50% deposit reserves your space, with the balance due 60 days before we begin. All payments are non-refundable, but if life happens, your place can transfer to another woman, or become credit toward a future retreat within 12 months. I'd gently recommend travel insurance.</p></div>
+  <div class="item"><h4>I'm nervous. Is that normal?</h4><p>So normal. Nearly every woman feels it before she says yes. That flutter usually means something in you already knows it's time. Come anyway. I've got you.</p></div>
+</section>
+
+<!-- CLOSE -->
+<section class="close">
+  <img class="bg" src="/Photos/retreat-field-banner.jpg" alt="">
+  <div class="ov"></div>
+  <div class="c">
+    <h2>Okay… that's it. That's my heart.</h2>
+    <p>If something in you leaned in while reading, that's not an accident. You're probably exactly the woman I made this for. And honestly? I'm still becoming her too, right alongside you.</p>
+    <div class="final">Come to Bali. Put it all down. And let's meet the woman you're becoming.</div>
+    <a class="btn solid" href="#details">Reserve your space</a>
+    <p class="tiny">Or message me "I'M IN" and I'll send you everything. x</p>
+  </div>
+</section>
+
+<footer>
+  <div class="logo"><img src="/Photos/retreat-logo-white.png" alt="Doris Au Yeung"></div>
+  <p>Glow Up From the Inside Out · Bali · November 2026</p>
+</footer>
+
+</body>
+</html>
